@@ -13,10 +13,10 @@ body{
     height: 200px;
     width: 500px;
     text-align: center;
-    display: table-cell;
+
     vertical-align: middle;
 }
-input {text-align: right;
+input {text-align: left;
 
     width:490px;
     height: 45px;
@@ -24,4 +24,38 @@ input {text-align: right;
 }
 h3{  font-family: 'Pacifico', cursive;
     color: red;
+}
+.hidden{
+    display: none;
+}
+#level-select {
+
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color: white;
+    height: 400px;
+    width: 500px;
+    text-align: center;
+
+    vertical-align: middle;
+
+}
+#level-select input {
+    height: 30px;
+}
+#game {
+
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color: white;
+    height: 400px;
+    width: 500px;
+    text-align: center;
+
+    vertical-align: middle;
+
 }

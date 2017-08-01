@@ -12,11 +12,29 @@
 <body>
 
 
-<div id="register">
+<div id="register" class="hidden">
     <h3>Fast Typing</h3>
-    <input id="first register" type="text" placeholder="Enter: neme">
+    <input id="first-register" type="text" placeholder="Enter: Name">
     <br>
-    <button id="register go" ondblclick="colorGreen()">GO</button>
+    <button id="btn-go" class="btn btn-danger" type="button" disabled value="true">GO</button>
+</div>
+
+<div id="level-select" class="hidden">
+    <h3>Fast Typing</h3>
+
+
+    <input type="checkbox" name="play" value="9">Easy
+    <input type="checkbox" name="play" value="6">Medium
+    <input type="checkbox" name="play" value="3">Hard
+    <br>
+
+    <button id="btn-level" class="btn btn-danger" type="button">GO Play</button>
+</div>
+
+<div id="game" class="hidden">
+
+    <h3>Fast Typing</h3>
+
 </div>
 
 
@@ -25,5 +43,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="script.js"></script>
 <script src="data.js"></script>
-<script>new fastTyping()</script>
+<script>new FastTyping()</script>
 </html>
