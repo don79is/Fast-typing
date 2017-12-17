@@ -2,54 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Fast Typing</title>
 </head>
 <body>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <!--register-->
+            <div id="register" class="hidden">
+                <div class="panel panel-info panel-transparent">
+                    <div class="panel-heading">
+                        <h3><b>Fast Typing Game</b></h3>
+                    </div>
+                </div>
+                <div class="panel panel-info panel-transparent">
+                    <div class="panel-body">
+                        <h5>Pelase Register:</h5>
+                        <input class="form-control" id="name" type="text" placeholder="Enter: Name">
+                        <br><br>
+                        <button id="go" class="btn btn-info btn-md" type="button" disabled value="true">Start
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--level-select-->
+            <div id="level-select" class="hidden">
+                <div class="panel panel-info panel-transparent">
+                    <div class="panel-heading">
+                        <h3>Fast Typing Game</h3>
+                    </div>
+                </div>
+                <div class="panel panel-info panel-transparent">
+                    <div class="panel-body">
+                        <h5> Players name: <span id="gamerName"></span></h5>
+                        <h2> Select Level:</h2>
+                        <form>
+                            <input type="radio" id="easy" name="play" value="9">
+                            <label for="easy">Easy</label>
+                            <input type="radio" id="medium" name="play" value="6">
+                            <label for="medium">Medium</label>
+                            <input type="radio" id="hard" name="play" value="3">
+                            <label for="hard">Hard</label>
+                            <br><br>
+                            <button id="play" class="btn btn-success" type="button">Play</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--Game -->
+            <div id="game" class="hidden">
+                <div class="panel panel-info panel-transparent">
+                    <div class="panel-heading">
+                        <h3>Fast Typing Game</h3>
+                    </div>
+                </div>
+                <div class="panel panel-info panel-transparent">
+                    <div class="panel-body">
+                        <h5>Players name: <span id="gamer"></span></h5>
+                        <h5>Score: <span id="score">0</span></h5>
 
-<div id="register" class="hidden">
-    <h3>Fast Typing</h3>
-    <input id="first-register" type="text" placeholder="Enter: Name">
-    <br>
-    <button id="btn-go" class="btn btn-danger" type="button" disabled value="true">GO</button>
+                        <h2 class="button" id="point"></h2>
+                        <br>
+                        <h5>Lives left:<span id="live"><b> 3 </b></span></h5>
+                    </div>
+                    <div id="gift"></div>
+                </div>
+            </div>
+            <!-------Game Over------>
+            <div id="game-over" class="hidden">
+                <div class="panel panel-info panel-transparent">
+                    <div class="panel-heading">
+                        <h3>Fast Typing Game</h3>
+                    </div>
+                </div>
+                <div class="panel panel-info panel-transparent">
+                    <div class="panel-body">
+                        <h2>GAME OVER!!!</h2>
+                        <h4>Name: <span id="gamers"></span></h4>
+                        <h4>Score: <span id="scores"></span></h4>
+                        <h4>Game time: <span id="gameTime"></span>min.</h4>
+                        <button id="newGame" class="btn btn-danger" type="button">New Game</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-<div id="level-select" class="hidden">
-    <h3>Fast Typing</h3>
-
-
-    <input type="checkbox" name="play" value="9">Easy
-    <input type="checkbox" name="play" value="6">Medium
-    <input type="checkbox" name="play" value="3">Hard
-    <br>
-
-    <button id="btn-level" class="btn btn-danger" type="button">GO Play</button>
-</div>
-
-
-<div id="game" class="hidden">
-    <div id="gamer"></div>
-    <h2></h2>
-    <h3>Fast Typing</h3>
-    <div>Score: <span id="score">0</span></div>
-    <div>Lives left: <span id="life">3</span></div>
-</div>
-
-<div id="game-over" class="hidden" >
-    <h3>Fast Typing</h3>
-    <div>Score: <span id="final-score"></span></div>
-    <button id="btn-over" class="btn btn-danger" type="button">Restart</button>
-</div>
-
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="script.js"></script>
 <script src="data.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
 <script>new FastTyping()</script>
 </html>
